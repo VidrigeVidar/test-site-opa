@@ -3,6 +3,8 @@ name: Test Deploy
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   cypress_tests:
@@ -36,4 +38,5 @@ jobs:
           script: |
             cd /var/www/test-site-opa
             git pull
+
             
